@@ -1,7 +1,7 @@
 {
-  "name": "test-plugin",
+  "name": "qiankun-sub-app-plugin",
   "publisher": "Virious",
-  "displayName": "test-plugin",
+  "displayName": "qiankun-sub-app-plugin",
   "repository": {
     "type": "git",
     "url": ""
