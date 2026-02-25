@@ -1,6 +1,10 @@
 <template>
   <div v-if="isQiankun" class="sub-app-layout">
-    <router-view />
+    <router-view v-slot="{ Component, route }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" :key="route.path" />
+      </transition>
+    </router-view>
   </div>
 
   <el-container v-else class="local-layout">
@@ -17,7 +21,11 @@
       </el-header>
 
       <el-main class="local-main">
-        <router-view />
+        <router-view v-slot="{ Component, route }">
+          <transition name="fade" mode="out-in">
+            <component :is="Component" :key="route.path" />
+          </transition>
+        </router-view>
       </el-main>
     </el-container>
   </el-container>
@@ -31,6 +39,15 @@ const isQiankun = qiankunWindow.__POWERED_BY_QIANKUN__;
 </script>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 .sub-app-layout {
   min-height: 100%;
 }
