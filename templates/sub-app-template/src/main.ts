@@ -5,6 +5,8 @@ import router from './router';
 import { createPinia } from 'pinia';
 import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/dist/helper';
 
+import '@/assets/main.css';
+
 // 清除监听器的方法
 import { initAuthListener, clearAuthListener } from '@/utils/auth-listener';
 // 引入指令
