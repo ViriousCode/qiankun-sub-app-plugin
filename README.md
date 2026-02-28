@@ -15,7 +15,11 @@
 
 ## 📦 安装 (Installation)
 
-1. 下载本插件的 `.vsix` 安装包。
+1. 打包本插件的 `.vsix` 安装包。
+   
+   ```json
+   vsce package
+   ```
 2. 打开 VS Code，进入左侧的 **扩展 (Extensions)** 面板。
 3. 点击面板右上角的 `...` (更多操作) 图标。
 4. 选择 **从 VSIX 安装... (Install from VSIX...)** 并选择下载的安装包。
