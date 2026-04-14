@@ -12,6 +12,9 @@ npm install
 npm run dev
 ```
 
+需要手动安装 @npm/azura-icon, 需要在npmrc中填写自己的token, https://git.azuratech.com:19000/-/user_settings/personal_access_tokens?page=1&state=active&sort=expires_asc -> add new token -> Select scopes -> 选择api后创建token
+
+
 启动后，子应用将默认运行在本地的指定端口（如 http://localhost:5179，具体端口号请参考 vite.config.ts 中的 server 配置）。
 
 然后将 src\store\permission.ts 里 usePermissionStore 中 APP_NAME 改为在主应用中应用管理保存的应用名称
